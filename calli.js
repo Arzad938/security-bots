@@ -66,10 +66,10 @@ calli.on("message", message => {
   }
 });
 ///////////////////////////////////////////////////////////////////////////////
-calli.login("")
+calli.login("ODU2MTg2NzY2NzE2NTY3NTUy.YM9YEA.Hb3bh_RMxSolkT-ZvyZ1eL_YU-I")
 ///////////////////////////////////////////////////////////////////////////////
-const callienabled  = "";
-const callidisabled = "";
+const callienabled  = "-lock";
+const callidisabled = "-unlock";
 const callifalse    = "";
 const callitrue     = "";
 const callicolor    = "";
@@ -79,7 +79,7 @@ const calliwarn     = "";                                                       
 ///////////////////////////////////////////////////////////////////////////////
 calli.on("ready", () => {
   console.log(`${calli.user.tag}`);
-  calli.user.setActivity(`${prefix}help`, {
+  calli.user.setActivity(`${+}help`, {
     Type: "Playing"
   });
 });
@@ -100,33 +100,33 @@ calli.on("message", async message => {
       .setThumbnail(message.member.user.displayAvatarURL({ dynamic: true }))
       .setDescription(`
 **Info Commands**
-\`${prefix}botinfo\`
-\`${prefix}userinfo\`
-\`${prefix}serverinfo\`
-\`${prefix}invite\`
+\`${+}botinfo\`
+\`${+}userinfo\`
+\`${+}serverinfo\`
+\`${+}invite\`
 \`${prefix}owner\`
 
 **Moderation Commands**
-\`${prefix}lock\`
-\`${prefix}unlock\`
-\`${prefix}ban\` : @User
-\`${prefix}kick\` : @User
-\`${prefix}unban\` : Id/all
+\`${+}lock\`
+\`${+}unlock\`
+\`${+}ban\` : @User
+\`${+}kick\` : @User
+\`${+}unban\` : Id/all
 
 **Security Number**
-\`${prefix}anti kick\`: **Number**
-\`${prefix}anti ban\`: **Number**
-\`${prefix}anti channelD\`: **Number**
-\`${prefix}anti channelC\`: **Number**
-\`${prefix}anti roleD\`: **Number**
-\`${prefix}anti roleC\`: **Number**
+\`${+}anti kick\`: **Number**
+\`${+}anti ban\`: **Number**
+\`${+}anti channelD\`: **Number**
+\`${+}anti channelC\`: **Number**
+\`${+}anti roleD\`: **Number**
+\`${+}anti roleC\`: **Number**
 
 **Security On/Off**
-\`${prefix}anti bot\`: **on-off**
+\`${+}anti bot\`: **on-off**
 
 **Security**
-\`${prefix}settings\`
-\`${prefix}punishment\`
+\`${+}settings\`
+\`${+}punishment\`
 
 **Links**
 [Support](https://discord.gg/2XfWseYDWJ) - [Invite](https://discord.com/api/oauth2/authorize?client_id=${calli.user.id}&permissions=8&scope=bot) - [Website](https://security-bot4415.glitch.me/)
@@ -138,7 +138,7 @@ calli.on("message", async message => {
 });
 ///////////////////////////////////////////////////////////////////////////////
 calli.on("message", message => {
-  if (message.content === prefix + "rules") {
+  if (message.content === + + "rules") {
   if (cooldown.has(message.author.id)) {
       return message.channel.send(`You have to wait 5 seconds`).then(m => {
         m.delete({ timeout: cdtime * 600 });
@@ -188,7 +188,7 @@ calli.on("message", message => {
 });
 ///////////////////////////////////////////////////////////////////////////////
 calli.on("message", async message => {
-  if (message.content.startsWith(prefix + "invite")) {
+  if (message.content.startsWith(+ + "invite")) {
     if (cooldown.has(message.author.id)) {
       return message.channel.send(`You have to wait 5 seconds`).then(m => {
         m.delete({ timeout: cdtime * 600 });
